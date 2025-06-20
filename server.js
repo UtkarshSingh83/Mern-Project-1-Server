@@ -17,7 +17,7 @@ app.use(cors(corsOption));
 app.use('/auth', authRoutes);
 
 const PORT = 5001;
-app.listen(PORT, (error) => {
+app.listen(5001, (error) => {
     if (error) {
         console.log('Error starting the server:', error);
     } else {

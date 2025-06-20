@@ -11,8 +11,8 @@ const authController = {
 
         if (username === 'admin' && password === 'admin') {
             const user = {
-                name: 'Utkarsh',
-                email: 'Utk@2004'
+                name: 'Naman',
+                email: 'naman@2580'
             };
 
             const token = jwt.sign(user, secret, { expiresIn: '1h' });
@@ -40,6 +40,7 @@ const authController = {
             return response.status(401).json({ message: 'Uauthorized access' });
         }
 
+
         jwt.verify(token, secret, (error, user) => {
             if (error) {
                 return response.status(401).json({ message: 'Uauthorized access' });
@@ -51,4 +52,4 @@ const authController = {
 
 };
 
-module.exports=authController;
+module.exports = authController;
